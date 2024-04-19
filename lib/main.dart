@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,22 +30,22 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // ?First widget
-              Container(
-                width: 300,
-                height: 300,
-                color: Colors.deepPurple,
+              Expanded(
+                child: Container(
+                  color: Colors.deepPurple,
+                ),
               ),
               //? Second widget
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.deepPurple[400],
+              Expanded(
+                child: Container(
+                  color: Colors.deepPurple[400],
+                ),
               ),
               //? Third widget
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.deepPurple[200],
+              Expanded(
+                child: Container(
+                  color: Colors.deepPurple[200],
+                ),
               )
             ],
           )),
