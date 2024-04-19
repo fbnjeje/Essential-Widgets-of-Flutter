@@ -26,21 +26,22 @@ class MyApp extends StatelessWidget {
             leading: Icon(Icons.menu),
             actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
           ),
-          body: Column(
+          body: ListView(
+            scrollDirection: Axis.horizontal,
             children: [
               //! an error from the children column it to big
 
               // ?First widget
               Container(
-                height: 350,
+                width: 350,
                 color: Colors.deepPurple[100],
               ),
               Container(
-                height: 350,
+                width: 350,
                 color: Colors.deepPurple[200],
               ),
               Container(
-                height: 350,
+                width: 350,
                 color: Colors.deepPurple[400],
               ),
               //? Second widget
