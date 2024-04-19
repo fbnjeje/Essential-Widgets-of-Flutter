@@ -27,16 +27,17 @@ class MyApp extends StatelessWidget {
             actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
           ),
           body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // ?First widget
               Expanded(
+                flex: 1,
                 child: Container(
                   color: Colors.deepPurple,
                 ),
               ),
               //? Second widget
               Expanded(
+                flex: 2,
                 child: Container(
                   color: Colors.deepPurple[400],
                 ),
