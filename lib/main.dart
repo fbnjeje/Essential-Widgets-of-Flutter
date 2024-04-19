@@ -14,41 +14,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              "Essentials",
-              style: TextStyle(color: Colors.white),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text(
+                "Essentials",
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: Colors.deepPurple,
+              centerTitle: true,
+              leading: Icon(Icons.menu),
+              actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
             ),
-            backgroundColor: Colors.deepPurple,
-            centerTitle: true,
-            leading: Icon(Icons.menu),
-            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-          ),
-          body: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              //! an error from the children column it to big
-
-              // ?First widget
-              Container(
-                width: 350,
-                color: Colors.deepPurple[100],
-              ),
-              Container(
-                width: 350,
-                color: Colors.deepPurple[200],
-              ),
-              Container(
-                width: 350,
-                color: Colors.deepPurple[400],
-              ),
-              //? Second widget
-
-              //? Third widget
-            ],
-          )),
-    );
+            body: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) => ListTile(
+                      title: Text(index.toString()),
+                    ))));
   }
 }
