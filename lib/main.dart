@@ -28,26 +28,24 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
+              //! an error from the children column it to big
+
               // ?First widget
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.deepPurple,
-                ),
+              Container(
+                height: 350,
+                color: Colors.deepPurple[100],
+              ),
+              Container(
+                height: 350,
+                color: Colors.deepPurple[200],
+              ),
+              Container(
+                height: 350,
+                color: Colors.deepPurple[400],
               ),
               //? Second widget
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.deepPurple[400],
-                ),
-              ),
+
               //? Third widget
-              Expanded(
-                child: Container(
-                  color: Colors.deepPurple[200],
-                ),
-              )
             ],
           )),
     );
