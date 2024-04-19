@@ -14,33 +14,39 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          title: Text(
-            "Essentials",
-            style: TextStyle(color: Colors.white),
-          ),
-          backgroundColor: Colors.deepPurple,
-          centerTitle: true,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.deepPurple),
-            padding: EdgeInsets.all(20),
-            child: Icon(
-              Icons.favorite,
-              color: Colors.white,
-              size: 64,
+          appBar: AppBar(
+            title: Text(
+              "Essentials",
+              style: TextStyle(color: Colors.white),
             ),
+            backgroundColor: Colors.deepPurple,
+            centerTitle: true,
+            leading: Icon(Icons.menu),
+            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
           ),
-        ),
-      ),
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // ?First widget
+              Container(
+                width: 300,
+                height: 300,
+                color: Colors.deepPurple,
+              ),
+              //? Second widget
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.deepPurple[400],
+              ),
+              //? Third widget
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.deepPurple[200],
+              )
+            ],
+          )),
     );
   }
 }
